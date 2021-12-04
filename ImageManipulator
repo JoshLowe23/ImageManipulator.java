@@ -1,0 +1,93 @@
+import java.io.FileInputStream;
+    import java.io.File;
+    import java.io.FileInputStream;
+    import java.io.FileOutputStream;
+    import java.io.IOException;
+    import java.util.ArrayList;
+
+
+/**
+ * @author Josh Lowe
+ * ImageManipulation project.
+ * Hard time with Illegal start of expression 
+ */
+public class ImageManipulator 
+{
+  int img = 0;
+    /**
+     * Skips comments and whitespace to return the next number from the 
+     *     input file.
+     * @param input the FileInputStream to read from
+     * @return the next number in the file (skipping comments and whitespace)
+     */
+     public static void main(String[] args);
+     
+    static int getNextNumber (FileInputStream input) throws IOException
+    {
+        int b = input.read();
+        String numberChars = "";
+        //public int read(byte[] b);
+        //throws IOException;
+        // Skip comments and whitespace
+        while (b == '#' || Character.isWhitespace((char)b))
+        {
+  
+           // Skip entire line
+           if (b == '#') 
+           {
+              while (b != '\n') b = input.read();
+           }
+           // eat the whitespace (or hard return)
+           b = input.read();
+        }
+  
+        // b is not a comment or whitespace. 
+        //     Reads in the number, character at a time.
+        while ((Character.isDigit(b))) 
+        {
+           numberChars = numberChars + (char)b;
+           b = input.read();
+        }
+        return Integer.parseInt(numberChars);
+          
+    }
+ public static void main(String[] args)
+ {
+        File.InputStream SC = new File.InputStream ("SC.png");
+     
+       
+       Scanner scnr = new Scanner("SC.png");
+        void rotatePNG(SC.png);
+ 
+ {
+	public int getHeight();
+	{
+		return height;
+	}
+
+	public void setHeight(int height);
+	{
+		this.height=height;
+	}
+
+	public int getWidth();
+	{
+		return width;
+	}
+
+	public void setWidth(int width);
+	{
+		this.width=width;
+	}
+}
+
+int size = img->h*img->w;
+int wid = img->height;
+int hgt= img->width;
+     File.OutputStream SC = new File.OutputStream ("SC.png");
+       
+           
+ }
+}      
+
+
